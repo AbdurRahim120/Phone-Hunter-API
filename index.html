@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hot Gadgets</title>
+
+    <!-- font link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- daisyui link  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.7.5/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- fontawsome cdn  -->
+    <script src="https://kit.fontawesome.com/770e654504.js" crossorigin="anonymous"></script>
+
+    <style>
+      .font-poppins {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="font-poppins container mx-auto">
+    <header class="mt-6 px-10 lg:px-20">
+      <div class="flex justify-between items-center">
+        <h1 class="font-bold">Hot Gadgets</h1>
+        <button class="btn btn-primary">
+          Sign Up
+        </button>
+      </div>
+      <div class="text-center">
+        <h1 class="text-4xl font-bold my-5">Apple Iphone 13 Pro Max</h1>
+        <p class="text-xs md:w-1/2 mx-auto mb-4">
+          There are many variations of passages of Lorem Ipsum available, but
+          the majority have suffered alteration in some form, by injected humou.
+        </p>
+        <button class="btn btn-primary">
+          Buy Now
+        </button>
+      </div>
+      <div class="text-center my-5">
+        <h1 class="mb-4 text-2xl font-semibold">Search your phone</h1>
+
+        <input
+          id="input-text"
+          type="text"
+          placeholder="Search..."
+          class="input input-bordered md:w-full max-w-xs"
+        />
+        <button
+          onclick="searchPhone()"
+          class="btn btn-primary"
+        >
+          Search
+        </button>
+      </div>
+    </header>
+    <main >
+      <section class="mx-10 lg:mx-20">
+        <!-- spinner -->
+        <div id="loading-spinner" class="text-center my-48 hidden">
+          <span class="text-[#0D6EFD] loading loading-dots loading-lg"></span>
+        </div>
+
+        <div
+          id="phone-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        ></div>
+
+        <!-- show all button  -->
+        <div id="show-all-btn" class="text-center my-8 hidden">
+          <button
+            onclick="showAll()"
+            class="btn btn-primary"
+          >
+            Show All
+          </button>
+        </div>
+        <div>
+          <!-- Open the modal using ID.showModal() method -->
+          <dialog id="show_detail_modal" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box w-[75%] mx-auto">
+              <div id="show-detail-container">
+
+              </div>
+              <div class="modal-action">
+                <form method="dialog">
+                  <!-- if there is a button in form, it will close the modal -->
+                  <button class="btn btn-primary">Close</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
+        </div>
+      </section>
+    </main>
+    <footer class="footer px-10 mt-10 py-4 border-t bg-base-200 text-base-content border-base-300">
+      <aside class="">
+        <h1 class="text-3xl font-bold">Hot Gadgets</h1>
+        <p class="text-sm font-semibold">You can definitely work.</p>
+      </aside> 
+      <nav class="md:place-self-center md:justify-self-end">
+        <div class="grid grid-flow-col gap-4 items-center">
+          <a><i class="fa-brands fa-facebook text-3xl"></i></a> 
+          <a><i class="fa-brands fa-twitter text-3xl"></i></a>
+          <a><i class="fa-brands fa-instagram text-3xl"></i></a>
+          <button class="btn btn-primary">Join Premium</button>
+        </div>
+      </nav>
+    </footer>
+    <footer class="footer p-10 bg-base-200 text-base-content">
+      <nav>
+        <header class="footer-title">Services</header> 
+        <a class="link link-hover">Branding</a> 
+        <a class="link link-hover">Design</a> 
+        <a class="link link-hover">Marketing</a> 
+        <a class="link link-hover">Advertisement</a>
+      </nav> 
+      <nav>
+        <header class="footer-title">Company</header> 
+        <a class="link link-hover">About us</a> 
+        <a class="link link-hover">Contact</a> 
+        <a class="link link-hover">Jobs</a> 
+        <a class="link link-hover">Press kit</a>
+      </nav> 
+      <nav>
+        <header class="footer-title">Legal</header> 
+        <a class="link link-hover">Terms of use</a> 
+        <a class="link link-hover">Privacy policy</a> 
+        <a class="link link-hover">Cookie policy</a>
+      </nav>
+      <nav>
+        <header class="footer-title">Legal</header> 
+        <a class="link link-hover">Terms of use</a> 
+        <a class="link link-hover">Privacy policy</a> 
+        <a class="link link-hover">Cookie policy</a>
+      </nav>
+    </footer> 
+    
+    <script src="/js/script.js"></script>
+  </body>
+</html>
